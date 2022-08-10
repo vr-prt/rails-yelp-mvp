@@ -12,7 +12,7 @@ Restaurant.delete_all
 
 puts "Creating restaurants and reviews..."
 
-5.times do
+10.times do
   resto = Restaurant.create!(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
