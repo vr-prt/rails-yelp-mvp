@@ -19,14 +19,14 @@ puts "Creating restaurants and reviews..."
     category: Restaurant::RESTAURANT_CATEGORIES.sample
   )
 
-  review = Review.new(content: Faker::Restaurant.review, rating: rand(0..5))
-
-  review.restaurant = resto
-
-  review.save!
-
   puts "#{resto.name} was created at id #{resto.id}"
-  puts "Review with rating #{review.rating} linked to #{review.restaurant.name} was created"
+
+  3.times do
+    review = Review.new(content: Faker::Restaurant.review, rating: rand(0..5))
+    review.restaurant = resto
+    review.save!
+    puts "Review with rating #{review.rating} linked to #{review.restaurant.name} was created"
+  end
 end
 
 puts "All done!"
