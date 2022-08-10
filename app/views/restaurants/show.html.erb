@@ -8,7 +8,19 @@
 <h4>Reviews:</h4>
 <ol>
   <% @restaurant.reviews.each do |review| %>
-    <li><%= review.content %></li><br>
+    <li>
+      <%= review.content %><br>
+        <% review.rating.times do %>
+          <%= '⭐' %>
+        <% end %>
+    </li><br>
+
   <% end %>
 </ol>
+<%= link_to 'All reviews', restaurant_reviews_path(@restaurant) %>
+
+<br>
+<br>
+<br>
+
 <%= link_to 'Restaurants list', restaurants_path %>

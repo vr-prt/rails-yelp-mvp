@@ -1,8 +1,13 @@
-<h1>Reviews</h1><br>
+<h1>Reviews of <%= @restaurant.name %></h1><br>
 
 <ol>
 <% @reviews.each do |review| %>
-  <li><%= review.content %></li><br>
+  <li>
+    <%= review.content %><br>
+    <% review.rating.times do %>
+      <%= '⭐' %>
+    <% end %>
+  </li><br>
 <% end %>
 </ol>
 

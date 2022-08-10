@@ -16,6 +16,12 @@
 
  a {
   text-decoration: none;
+  color: #375b91;
+  transition: .3s;
+ }
+
+ a:hover {
+  color: #4a72ad;
  }
 
  .container {
@@ -26,7 +32,7 @@
  #nav {
   height: 60px;
   padding: 20px;
-  background-color: #0d6efd;
+  background-color: #375b91;
  }
 
  #nav > .nav-container {
@@ -39,4 +45,22 @@
 
  #nav a {
   color: white;
+ }
+
+ #restaurants-reviews {
+  padding: 0;
+  list-style: none;
+  padding-top: 20px;
+ }
+
+ #restaurants-reviews li {
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: .3s;
+ }
+
+ #restaurants-reviews li:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  }
